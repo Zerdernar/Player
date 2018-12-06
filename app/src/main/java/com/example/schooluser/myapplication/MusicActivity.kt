@@ -16,13 +16,47 @@ class MusicActivity : AppCompatActivity() {
         player.prepare()
         var flag = false
 
+//        Кнопка вперед
+        forward.setOnClickListener {
+            player.seekTo(player.currentPosition + 5000)
+        }
+        //        Кнопка вперед(долго)
+        forward.setOnLongClickListener {
+            player.seekTo(player.currentPosition + 5000)
+            return@setOnLongClickListener true
+        }
+
+        //        Кнопка назад
+        back.setOnClickListener {
+            player.seekTo(player.currentPosition - 5000)
+        }
+
+        //        Кнопка назад(долго)
+        back.setOnLongClickListener {
+            player.seekTo(player.currentPosition - 5000)
+            return@setOnLongClickListener true
+        }
+
+//        Кнопка стоп(долго)
+        k_play.setOnLongClickListener {
+            if (flag == true) {
+                player.stop()
+                player.prepare()
+                player.start()
+                return@setOnLongClickListener true
+            } else {
+                player.stop()
+                player.prepare()
+                return@setOnLongClickListener true
+            }
+        }
 //                Кнопка Плей
         k_play.setOnClickListener {
             if (flag == true) {
                 player.pause()
                 flag = false
                 k_play.setImageResource(R.drawable.play)
-            } else{
+            } else {
                 player.start()
                 flag = true
                 k_play.setImageResource(R.drawable.pause)

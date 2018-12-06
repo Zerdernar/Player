@@ -21,8 +21,8 @@
     </android.support.constraint.ConstraintLayout>
 
     <ImageView
-            android:layout_width="300dp"
-            android:layout_height="300dp"
+            android:layout_width="340dp"
+            android:layout_height="280dp"
             android:src="@drawable/anderson"
             android:id="@+id/face_music"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -78,7 +78,7 @@
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0:01"
+                android:text="4:21"
                 android:textStyle="bold"
                 android:textColor="@color/colorGrey"/>
 
@@ -87,24 +87,32 @@
 
     <com.google.android.flexbox.FlexboxLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginHorizontal="10dp"
+            android:layout_height="wrap_content"
             android:id="@+id/play_bar"
             app:justifyContent="space_around"
+            app:alignItems="center"
             app:layout_constraintTop_toBottomOf="@id/feename_composition"
             app:layout_constraintBottom_toTopOf="@+id/bottom_panel">
 
         <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="14dp"
                 android:id="@+id/download"
-                android:src="@drawable/download"/>
+                android:src="@drawable/download"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/riple_effect"/>
 
         <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="5dp"
                 android:id="@+id/back"
-                android:src="@drawable/back1"/>
+                android:src="@drawable/back1"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/riple_effect"/>
 
         <!--КНОПКА ПЛЕЙ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
         <ImageView
@@ -113,17 +121,28 @@
                 android:src="@drawable/play"
                 android:id="@+id/k_play"
                 android:clickable="true"
-                android:focusable="true"/>
+                android:focusable="true"
+                app:layout_alignSelf="center"
+                android:background="@drawable/riple_effect"/>
 
         <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/forward"/>
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="5dp"
+                android:src="@drawable/forward"
+                android:id="@+id/forward"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/riple_effect"/>
 
         <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/more"/>
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="14dp"
+                android:src="@drawable/more"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/riple_effect"/>
 
 
     </com.google.android.flexbox.FlexboxLayout>
@@ -138,25 +157,37 @@
     <com.google.android.flexbox.FlexboxLayout
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:layout_marginHorizontal="10dp"
             android:id="@+id/bottom_panel"
             app:justifyContent="space_between"
+            app:alignItems="center"
             app:layout_constraintBottom_toBottomOf="parent">
 
         <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:src="@drawable/shuffle"/>
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/shuffle"
+                android:background="@drawable/riple_effect"/>
 
         <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:src="@drawable/menu"/>
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/menu"
+                android:background="@drawable/riple_effect"/>
 
         <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:src="@drawable/autorenew"/>
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/autorenew"
+                android:background="@drawable/riple_effect"/>
 
     </com.google.android.flexbox.FlexboxLayout>
 
