@@ -10,7 +10,13 @@ class MusicActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_music)
-        val path = intent.getStringExtra("path")
+//        Получаем то что отправили из MainActivity
+        val path = intent.getStringExtra("filepath")
+        val title = intent.getStringExtra("title")
+        val artist = intent.getStringExtra("artist")
+//
+        name_composition.text = title
+        feename_composition.text = artist
         val player = MediaPlayer()
         player.setDataSource(path)
         player.prepare()
