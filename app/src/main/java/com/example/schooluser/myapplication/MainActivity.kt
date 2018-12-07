@@ -45,6 +45,7 @@ class MainActivity : AppCompatActivity() {
 
                         if (isGranted) {
                             val intent = Intent(baseContext, MusicActivity::class.java)
+//                            Отправляем письмо с инфой в другое активити
                             intent.putExtra("filepath", song.getFilepath())
                             intent.putExtra("artist", song.getArtist())
                             intent.putExtra("title", song.getTitle())
@@ -85,7 +86,7 @@ class MainActivity : AppCompatActivity() {
             val albumImages = Uri.parse("content://media/external/audio/albumart")
 //            Выбор обложки из всех обложек
             val albumImage = ContentUris.withAppendedId(albumImages, albumId)
-
+//Создала пустой объект
             val song = Song()
             song.setAlbum(albumImage)
             song.setArtist(artists)
@@ -93,7 +94,9 @@ class MainActivity : AppCompatActivity() {
             song.setTitle(title)
             list.add(song)
         }
+//        Закрываем курсор
         cursor?.close()
+//        Повтор функции getSound
         return list
     }
 
